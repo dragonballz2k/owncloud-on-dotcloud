@@ -2,8 +2,7 @@
 
 WWW_DIR="$HOME/www"
 LIGHTTPD_DIR="$HOME/lighttpd"
-OC_PACKAGE="http://download.owncloud.com/download/owncloud-2012.0.3-enterprise.tar.bz2"
-PLUGINS_PACKAGE="http://download.owncloud.com/download/owncloud-2012.0.3-enterprise-unsupported.tar.bz2"
+OC_PACKAGE="http://owncloud.org/releases/owncloud-latest.tar.bz2"
 
 cd
 
@@ -14,12 +13,9 @@ else
 	mkdir $WWW_DIR
 	mkdir ~/data
 	wget "$OC_PACKAGE"
-	tar -xjf owncloud-2012.0.3-enterprise.tar.bz2
+	tar -xjf owncloud-latest.tar.bz2
 	mv ./owncloud/* $WWW_DIR/
-	wget "$PLUGINS_PACKAGE"
-	tar -xjf owncloud-2012.0.3-enterprise-unsupported.tar.bz2
-	mv ./owncloud-unsupported/apps/* $WWW_DIR/apps/
-	rm -rf ownc*
+	
 
 fi
 
